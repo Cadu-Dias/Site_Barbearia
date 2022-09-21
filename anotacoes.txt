@@ -1,0 +1,288 @@
+Termos específicos:
+    <!-- head: local aonde se passa as informações ao navegador -->
+
+    <!-- Meta: passa informação ao navegador; charset: tipo de caracteres; Utf: dicionario de caracteres usado na maioria das linguagens -->
+    
+    /* text-align: local aonde o texto ficará alinhado, como no centro */
+
+    <!-- <Strong>: possibilita que o texto fica em negrito -->   
+
+    <!-- <em>: deixa o texto em italico -->
+
+    <a>: denominada de ancora, ela é utilizada para linkar diferentes sites
+
+    <!-- Main: considerada uma tag semântica, ela engloba aquilo que é amais de importante no site -->
+
+    <p style background: >: possibilita mudar o fundo 
+
+OBS: caso queira alterar um texto específico, deve-se pegar a tag que cubre apenas o texto que quer
+    |_> Ex: strong {
+
+        font-weight: bold
+    }
+    |_> OBS 1.1: Caso tal tag cubra diferentes textos, coloca-se atrás da tal tag outra tag que cubra
+            |_> Ex: em strong {
+
+                font-weight: italic
+            }
+
+Formas de aplicar o css:
+    1ª Dentro dos paragrafos e etc.:
+        <p style="font-size: 20px; text-align: center;">
+
+    2ª Dentro da tag <head> inserir a tag <style> </style>
+        <style>
+            p { 
+            text-align: center;
+            font-size: 20px; 
+            }
+        </style>
+
+    3ª Conectar com um arquivo css:
+        |_> Embaixo da tag <title> </title> colocar:
+            <link rel="stylesheet" href="style.css">
+                        |_> Folha de estilo
+        rel: tipo de relacionamento com o arquivo
+        href: nome do arquivo css
+
+
+Formas de medir algo:
+    width(Comprimento): 100%(Ocupará 100% da página);
+    height(Altura): 300px;
+    /* padding (espaçeamento interno): Como ajustar o espaçamento interno do elemento, através da propriedade
+        O padding pode aumentar o seu tamanho, já que quando declaro que existe um espaçamento interno, estou aumentando o conteúdo, envolvendo a largura e comprimento
+        |_> padding-top: espaçeamento só em cima
+        |_> padding-left: espaçeamento só na esquerda
+        |_> padding-right: espaçeamento só na direita
+        |_> padding-down: espaçeamento só em baixo
+    */   
+    /* border (borda): uma borda entre um texto aparecerá */
+    /* margin: Como ajustar o espaçamento externo do elemento, através da propriedade */
+    |_> Display
+        |_> inline: conteúdo que fica um do lado do outro;
+            não permite alterar o espaçamento externo do elemento
+        |_> Block: o elemento ocupará a largura inteira da página; Tamanho da imagem será 100% da página
+        |_> inline-block: bloqueia uma largura, mas a largura é fixa;
+                          Deixa eu mexer no espaçamento externo e interno;
+                          O tamanho pode ser ajustado, tanto na largura, quanto na altura.
+    |_> Vertical align: Mudança vertical do local onde o elemento ficará alinhado
+
+Diferença entre id e classe:
+    |_> id: utilizado apenas em uma tag, sendo algo único
+    |_> class: utilizado em uma ou mais tags, sendo algo repetível
+
+Arquivo reset.css: 
+    |_> Arquivo de css que limpa tudo que o navegador cria
+
+Position Static x Position Relative:
+    |_>  Indiretamente, a tag está em uma posição estática (position: static), tendo seu ponto de 
+        inicio fixo. Desse modo, para que saia desse ponto utiliza-se o comando "position: relative"
+        o qual permite mudar a posição com relação a posição inicial 
+            |_> Para poder mudar a posição, usa-se os comandos: TOP, DOWN, LEFT, RIGHT
+
+Position Absolute: o texto presente na tag, passa ter seu próprio espaço, de modo a ser removido daquilo que fazia parte antes
+    |_> O seu ponto inicial passa a ser aquele que o programador colocar
+
+Border: a borda fica posicionada entre o padding e a margin.
+    |_> border-width: largura da borda
+    |_> border-style: estilo da borda
+    |_> border-color: cor da borda
+    |_> Forma comum de escrever - border: 2px(width) solid(style) #000000(color)
+
+Unicode: site o qual informa como colocar caracteres especiais em código
+    |_> A forma mais padrão seria a de Entidade
+
+
+
+Hierarquia no CSS:
+    |_> Tal conceito será apresentado caso comandos diferentes afetem um mesmo componente do HTML, daí
+        entra a questão da hierarquia, visto que dependendo do que estiver escrito no CSS, um comando irá
+        sobrepor o outro, de modo a apenas um ser executado 
+    |_> Para um entendimento mais simples, considere que o ID tem força 100, Classe tem força 10 
+        e Tag tem força 1
+
+    1ª ID: caso o programador utilize o id como indentificador no CSS, ele será aquele considerado no
+    pelo programa
+
+    2ª Classe: caso o programador utilize uma classe e não o ID como indentificador no CSS, a classe será aquela
+    considerada pelo programa
+
+    3ª Tag: caso o programador utilize uma tag, contudo, não usa a Classe ou ID como indentificadores, a tag
+    será considerada pelo programa
+        |_> Se o programador utiliza tags as quais tem na sua composição o mesmo componente, considera-se 
+        aquele o qual tem mais tag, isto é, uma maior especificação
+        |_> Ex: 
+
+            p { 
+                        Nesse caso, o programa irá considerar o "form p" como quem aplicará as 
+            }           ações do CSS
+            form p { 
+
+            }
+    Obs: é passível de se combinar id com tag ou classe com tag 
+        |_> p#teste ou p.teste
+
+    OBS2: caso utiliza-se o comando CSS dentro das tags do código em HTML, tal comando será considerado,
+    de modo a superar a força do ID
+
+HTML em mobile: dependendo do tipo do input o teclado do celular pode variar 
+    |_> type="email": aparecera um arroba e ponto no teclado
+    |_> type="tel": o teclado passa a ser numérico 
+    |_> type="number": aparece o telcado de número
+    |_> type="password": conteúdo digitado passa a ser escondido
+    |_> type="data": aparece o seletor de data
+    |_> type="datatime": o usuário pode escolher o data e o tempo
+    |_> type="month": o usuário poder escolher o mês
+    |_>type="search": aparece o botão de busca
+
+
+Div x Section:
+    |_> Div: é apenas uma divisão visualization
+    |_> Section: é uma divisão que tem um conteúdo complexo os quais apresentam um mesmo objetivo, semantica
+
+    |_> Não colocar no título de uma classe, um comportamento
+
+Forma de medida Em:
+
+    /* em: medida proporcional para pixels, a qual é 15px
+    2em: refere-se a 30 pixels*/
+
+Como colocar um fonte de texto diferente no site:
+
+    1ª Entra no google fonts
+    2ª Procura a fonte a qual lhe interessa
+    3ª Copia-se o link dela em CSS e coloca-se dentro da tag <head> 
+        |_> Ex: 
+            <head>
+                <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">    
+            </head>
+    4ª Dentro de alguma tag no CSS, escreve-se a família fonte do textp
+        |_> Ex: 
+        body{ 
+            font-family: 'Montserrat', sans-serif;
+        }         
+
+Como colocar um mapa no site:
+
+    1ª Entra-se no google maps
+    2ª Coloca uma localização específica
+    3ª Ao escolher local, clique nas três linhas (Menu) que ficam no canto superior esquerdo
+    4ª Vá até a opção compartilhar
+    5ª Clique na secção de incorporar o mapa
+    6ª Copie o HTML e insirá no código
+
+Como colocar um vídeo no site:
+
+    1ª Entra no Youtube 
+    2ª Procure um vídeo aleatório
+    3ª Clique na opção de compartilhar
+    4ª Clique no círculo escrito incorporar
+    5ª Copie o HTML e insirá no código
+
+Pseudo-classes: é como se cria-se uma classe para aquele elemento, sem ter definido a classe em si
+    /* Dentro dos itens da lista de benefícios, apenas o primeiro item será afetado 
+    Isso é considerado como pseudo-classe*/
+    .itens:first-child {
+        font-weight: bold;
+    }
+    /* Nesse caso o ultimo elemento da lista será afetado */
+    /* .itens:last-child {
+            font-weight: bold;
+    } 
+    Nesse caso qualquer elemento escolhido será afetado, dentro dos parenteses coloca-se a posição
+    que aquele elemento se encontra
+    .itens:nth-child(3) {
+    
+    }    
+    Nesse caso, como o valor de n é infinito, quando multiplica-se por dois, apenas os elementos 
+    pares serão afetados
+    itens:nth-child(2n) {
+
+    }
+     Nesse caso, como o valor de n é infinito, quando multiplica-se por tres, apenas os elementos
+    ímpares serão afetados
+    itens:nth-child(3n) {
+
+    }
+    */]
+
+Como colocar um fundo degrade:
+    |_> Utiliza-se o comando background: linear-gradient(#FFFFFF, #888888)
+            |_> Nesse caso o fundo começa com uma cor e aos poucos vai mudando até a outra cor, nesse caso 
+                é do branco ao cinza
+        |_> Possível de colocar em que parte da página a primeira ou última cor aparecem
+            |_> background: linear-gradient(#FFFFFF50%, #888888)
+                |_> Nesse caso a cor branco, vai até metade da página
+        |_> Também é possível definir o ângulo
+            background: linear-gradient(45deg, #FFFFFF50%, #888888)
+    |_> Existe o comando background: radial-gradient(#FFFFFF, #888888)
+        |_> No caso forma-se um círculo o qual quanto mais ao centro, as cores vão mudando
+
+Seletores avançados: 
+    |_> 1ª Exemplo: quero pegar apenas um paragráfo que compõem a tag <main>
+            |_> Como resolver: main > p {
+                                    background: red;
+                               }
+                    |_> Apenas um paragráfo, pois ele apenas está dentro da tag <main>, sendo 
+                    como uma tag filha 
+
+    |_> 2ª Exemplo: quero pegar paragráfos que não tem o id missão 
+            |_> Como resolver:  .principal p:not(#missao) {
+                                    background: orange;
+                                }
+                    |_>  Nesse caso, estou pedindo ao programa pegar todos paragráfos os quais não tenham
+                    o id escrito dentro do paretenses do not
+
+    |_> 3ª Exemplo: como selecionar o primeiro parágrafo que sucede uma imagem
+            |_> Como resolver: img + p { 
+                                    background: blue
+                               }
+                    |_> Nesse caso, com o símbolo de mais junto da tag <img>, a qual serve como âncora,
+                    pegamos apenas o primeiro irmão da imagem, isto é, o primeiro paragráfo depois
+                    da imagem
+
+    |_> 4ª Exemplo: Para selecionar todos os parágrafos localizados depois de uma imagem usamos o seletor
+            |_> Como resolver: img ~ p {
+                                    background: yellow
+                                }           
+
+Cálculo no CSS:
+    |_> Utiliza-se o comando calc()
+        |_> Dentro dos paretenses pode-se realizar operações matemáticas as quais, na maioria das vezes, 
+        são utilizadas para acertar medidas de um componento como largura, comprimento altura etc.
+            |_> Ex: img {
+                        width: calc(40% - ((26px *4) / 5))
+                    }
+
+Opacidade 
+
+    /* Opacity: refere-se a opacidade, uma camada a mais posta sobre a imagem,
+     como um insulfilme para a janela de carro,
+     que oferece níveis diferentes de proteção contra o Sol ; vai de 0 a 1 */
+    
+Sombra
+    |_> Sombra em imagem 
+
+        /* Box-shadow: possui a propriedade do eixo X, Y, blur(opcional), intensidade da borda(opcional) 
+        e uma cor; Nesse caso, queremos deslocar 10px no eixo X e Y,  a cor que utilizaremos será preto.*/
+        body {
+            box-shadow: 10px 10px 10px 0 #000000;
+        }
+        /*OBS: é possível colocar sombra sobre sombra -  box-shadow: 10px 10px 10px #000000, -10px, -10px, #FFFFFF;*/
+
+    |_> Sombras internas: Utilizaremos a própria sessão de benefícios para exempliciar esse efeito,
+     que será utilizado em box-shadow e se chama inset. Seu posicionamento será a partir do 
+     centro do elemento e terá a cor vermelha
+
+        .beneficios {
+            box-shadow: inset 0 0 #FF0000;
+        }
+
+    |_> Sombra em textos: utiliza-se a propriedade text-shadow
+
+        .titulo-principal {
+            text-shadow: 2px 2px #FF0000; 
+        }
+
+
+    

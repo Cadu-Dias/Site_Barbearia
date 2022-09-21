@@ -1,0 +1,267 @@
+body{ 
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    background-color: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caixa{
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right:0%;
+}
+
+nav li {
+    display: inline-block;
+    /* cima, direita, baixo, esquerda  ou daria para colocar margin-left: 15px*/
+    margin: 0 0 0 15px; 
+}
+nav a {
+    /* Transforma o texto em maiusculo */
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    /* Tira qualquer decoração no texto */
+    text-decoration: none;
+}
+/* Hover: quando o mouse do usuário está sobre um texto algo acontecerá.
+Nesse caso, o usuário ao colocar o cursor nos textos linkados dentro da tag nav
+uma coloração e uma linha aparecerão, indicando que aquilo é clicável*/
+nav a:hover {
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+main {
+    
+}
+
+form {
+    margin: 40px 0;
+    margin-left: 3em;
+}
+
+form label, form legend {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.input-padrao {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px 25px;
+    width:50%;
+}
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar {
+    width: 40%;
+    padding: 15px 0;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border:none;
+    border-radius: 5px;
+    /* Transition: Utilizado deixar algo mais suave, tendo-se um tempo de transição, para que outra ação ocorra
+    nesse há uma transição de 1 segundo na cor do botão quando o usuário coloca o cursor nele */
+    transition: 1s all;
+    /* Cursor: Muda o estilo do cursor, de modo a indicar algo */
+    cursor: pointer;
+}
+.enviar:hover {
+    background: darkorange;
+    /* Transform: ao acontecer algo ele irá realizar alguma mudança, podendo ser de tamanho, posição e etc. */
+    /*transform: scale(1.2);*/
+}
+
+table {
+    margin: 20px 0 40px;
+    margin-left: 3em;
+}
+thead {
+    background: #555555;
+    color:#FFFFFF;
+    font-weight: bold;
+}
+
+td, th{
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+footer {
+    text-align: center;
+    /* Utilizado caso queira que o fundo seja uma imagem */
+    background-image: url("/images/bg.jpg");
+    padding: 40px;
+}
+
+.copyright{
+    color: #FFFFFF;
+    font-size: 13px;
+    margin-top: 20px;
+}
+/*=========================================== CSS da Página inicial =======================================*/
+.banner{
+    width:100%;
+}
+
+.titulo-principal {
+    text-align:center;
+    /* em: medida proporcional para pixels, a qual é 15px
+    2em: refere-se a 30 pixels*/
+    font-size: 2em;
+    margin: 0 0 1em 0;
+    /* Clear: limpa a ação do float */
+    clear: left;
+    font-weight: bold;
+}
+/* Pseudo-elemento: quando a partir do Css, consegue-se afetar um pequena parte do texto sem utilizar uma tag.
+Nesse caso, a primeira letra da classe titulo-principal ficará em negrito*/
+/*.titulo-principal::first-letter {
+    font-weight: bold;
+}
+/* Nesse dois exemplos, a partir do CSS, pode-se colocar conteúdo antes da aplicação em html;
+ Esses dois elementos criam espaço para que o CSS atue antes ou depois de um determinado conteúdo 
+.titulo-principal:before{
+
+}
+.titulo-principal:after {
+
+}*/
+.principal{
+    padding:3em 0;
+    background: #FEFEFE;
+    width: 940px;
+    margin: 0 auto;
+}
+.principal p{
+    margin: 0 0 1em 0;
+}
+.principal strong {
+    font-weight: bold;
+}
+.principal em {
+    font-style: italic;
+}
+
+.utensilios{
+    width:120px;
+    /* float: o elemento descola da página, contudo, o espaço que ele ocupava não pode ser coberto,
+    de modo que outros elementos fiquem envolta do elemento */
+    float: left;
+    margin: 0 20px 20px 0;
+}
+.mapa {
+    padding: 3em 0;
+    background: linear-gradient(#FFFFFF, #888888)
+    
+}
+.mapa-conteudo {
+    width: 940px;
+    margin: 0 auto;
+}
+.mapa p {
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.beneficios{
+    padding: 3em 0;
+    background: #888888;
+}
+.conteudo-beneficios{
+    width:640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios{
+    width:40%;
+    /* Obs: esse display ele vai interpretar até um espaço vazio no código html, de modo atrapalhar.
+    Assim, para deixar, por exemplo, um texto e uma imagem um do lado do outro no código html eles tem que
+    ficar um colado no outro, sem have um espaço */
+    display: inline-block;
+    vertical-align: top;
+}
+.itens {
+    /* line-height: altura da linha, muda o espaçamento entre textos */
+    line-height: 1.5;
+    margin-left: 300px;
+}
+/* Dentro dos itens da lista de benefícios, apenas o primeiro item será afetado 
+Isso é considerado como pseudo-classe*/
+.itens:first-child {
+    font-weight: bold;
+}
+/* Nesse caso o ultimo elemento da lista será afetado */
+/* .itens:last-child {
+        font-weight: bold;
+} 
+Nesse caso qualquer elemento escolhido será afetado, dentro dos parenteses coloca-se a posição
+que aquele elemento se encontra
+.itens:nth-child() {
+ 
+}    
+*/
+.itens:before{
+    content: "★"
+}
+
+.imagem-beneficios{
+    width:34%;
+    height:50%;
+    /* Opacity: refere-se a opacidade, uma camada a mais posta sobre a imagem,
+     como um insulfilme para a janela de carro,
+     que oferece níveis diferentes de proteção contra o Sol ; vai de 0 a 1 */
+    opacity: 1;
+    transition:400ms;
+    /* Box-shadow: possui a propriedade do eixo X, Y, blur(opcional), intensidade da borda(opcional) 
+    e uma cor; Nesse caso, queremos deslocar 10px no eixo X e Y,  a cor que utilizaremos será preto.*/
+    box-shadow: 10px 10px 10px 0 #000000;
+    /*OBS: é possível colocar sombra sobre sombra -  box-shadow: 10px 10px 10px #000000, -10px, -10px, #FFFFFF;*/
+}
+.imagem-beneficios:hover {
+    opacity: 0.3;
+}
+
+.video{
+    width: 560px;
+    margin: 2em auto;
+}
+/* Media queries: perguntamos ao navegador qual é o tamanho da tela em questão e,
+ se for aquele que desejamos, entregaremos o estilo correto */
+/* Caso a tela de um aparelho tenha largura até 480px, tera mudanças com o corpo do site */
+@media screen and (max-width:480px) {
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo {
+        width: auto;
+    }
+    h1 {
+        text-align: center;
+    }
+    nav {
+        position: static;
+    }
+    .lista-beneficios {
+        margin-right: 500px;
+        text-align: center;
+    }
+    .lista-beneficios, .imagem-beneficios{
+        width: 100%;
+    }
+    .video {
+        width: 50%;
+    }
+}

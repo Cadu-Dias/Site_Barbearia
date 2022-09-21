@@ -1,0 +1,107 @@
+
+header {
+    background-color: #BBBBBB;
+    padding: 20px 0;
+}
+
+.caixa{
+    position: relative;
+    width: 940px;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right:0%;
+}
+
+nav li {
+    display: inline-block;
+    /* cima, direita, baixo, esquerda  ou daria para colocar margin-left: 15px*/
+    margin: 0 0 0 15px; 
+}
+nav a {
+    /* Transforma o texto em maiusculo */
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    /* Tira qualquer decoração no texto */
+    text-decoration: none;
+}
+/* Hover: quando o mouse do usuário está sobre um texto algo acontecerá.
+Nesse caso, o usuário ao colocar o cursor nos textos linkados dentro da tag nav
+uma coloração e uma linha aparecerão, indicando que aquilo é clicável*/
+nav a:hover {
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+    
+}
+
+.produtos li {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    /* Box-sizing: tamanho da caixa. border-box: faz com que a largura sempre seja 30%, sendo assim
+    qualquer espaçamento que for feito, não vai alterar a largura */
+    box-sizing: border-box;
+    /*border-color: #000000;
+    border-style: solid;
+    /* border-widht: tem suas versões /border-top-width/border-down-widht/border-left-width/border-right-width */
+    /*border-width: 2px;*/
+    border: 2px solid #000000;
+    /* Defini a curvatura das bordas, fazendo um cálculo com os pixel passados para recriar o ângulo desejado */
+    border-radius: 10px;
+}
+
+.produtos li:hover {
+    border-color: #c78c19;
+}
+/* Active: Ao realizar a ação de clicar algo acontecerá */
+.produtos li:active{
+    border-color: #088c08
+}
+/* Nesse caso, quando o cursor estiver em cima dos elementos do li, os textos do h2 aumentarão de tamanho */
+.produtos li:hover h2 {
+    font-size: 34px;
+}
+
+
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.produto-descricao{
+    font-size: 18px;
+}
+
+.produto-preco{
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    /* Utilizado caso queira que o fundo seja uma imagem */
+    background-image: url("/images/bg.jpg");
+    padding: 40px;
+}
+
+.copyright{
+    color: #FFFFFF;
+    font-size: 13px;
+    margin-top: 20px;
+}

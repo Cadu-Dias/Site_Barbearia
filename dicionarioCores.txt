@@ -1,0 +1,48 @@
+Dicionário Hexadecimal:
+    0123456789ABCDEF 
+
+    Funciona como uma escala:
+        0: ausência da cor
+        F: máximo da cor
+
+    Segue o aspecto de cores RGB:
+    RGB = Red Green Blue
+
+    #_ _ _ _ _ _
+        |_> A cada dois espaços coloca-se valores da escala, para representar a color
+            como cada das três cores aparecerá, de modo a combina-las
+
+    Representação de um vermelho completo:
+    #FF0000
+
+Dicionário RGB:
+    0, 1, 2, 3, 4, 5, ...., 255
+
+    Funciona como uma escala:
+        0: ausência da cor
+        255: maximo da cor
+
+    RGB( , , ,)
+        |_> Coloca-se um valor da escala,para representar a color
+            como cada das três cores aparecerá, de modo a combina-las
+
+    Representação de um azul completo:
+    RGB(0,0,255)
+
+Dicionário RGBA:
+
+    Com relação as cores vermelho, verde, e azul o conceito permanece o mesmo, tendo sua
+    sua escala de 0 a 255
+
+    RGBA( , , , )
+        |_> |_> Coloca-se um valor da escala,para representar a color
+            como cada das três cores aparecerá, de modo a combina-las. No entanto, no 
+            quarto elemento adiciona-se a opacidade que vai de 0 a 1
+
+    Representação de um azul com opacidade:
+    RGBA(0,0,255, 0.4)
+
+Dicionário padrão:
+
+    Apenas coloque o nome da cor
+    Ex: background-color: red;
