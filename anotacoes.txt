@@ -219,7 +219,7 @@ Como colocar um fundo degrade:
         |_> No caso forma-se um círculo o qual quanto mais ao centro, as cores vão mudando
 
 Seletores avançados: 
-    |_> 1ª Exemplo: quero pegar apenas um paragráfo que compõem a tag <main>
+    |_> 1ª Exemplo: quero pegar um paragráfo que compõem a tag <main>
             |_> Como resolver: main > p {
                                     background: red;
                                }
